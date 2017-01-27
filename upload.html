@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Upload Image</title>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.js"></script>
+  <link rel="stylesheet" href="upload.css">
+</head>
+
+<body>
+  <div id="container">
+<!--     <div class="image">
+      <img src="camera.gif" id="photo">
+    </div> -->
+
+  <div class="image" onclick="$('#filePhoto').click()">
+    <img src="camera.gif">
+  </div>
+  <div style="display:none">
+    <input type="file" name="userprofile_picture"  id="filePhoto"  />
+  </div>
+  </div>
+
+  </div>
+</body>
+</html>
+
+<!-- upload crop and reposition an image (jpeg, PNG, GIF) -->
