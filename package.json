@@ -1,0 +1,23 @@
+{
+  "name": "imageuploader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "upload.js",
+  "dependencies": {
+    "cropperjs": "^1.0.0-beta.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robertkng/upload-image.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robertkng/upload-image/issues"
+  },
+  "homepage": "https://github.com/robertkng/upload-image#readme"
+}

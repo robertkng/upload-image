@@ -10,4 +10,22 @@
   width: 80%;
 }
 
-.image
+/*.image*/
+
+html,
+input {
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+.hidden {
+    display: none;
+}
+
+.img-export {
+    display: block;
+}
