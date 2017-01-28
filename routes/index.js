@@ -1,3 +1,10 @@
+const express = require('express');
+const indexRouter = express.Router();
+
+indexRouter.get('/', (req, res) => {
+  res.render('index');
+});
+
 /** Class used for uploading images. */
 class Uploader {
 /**
@@ -356,3 +363,5 @@ try {
 //       reader.readAsDataURL(e.target.files[0]);
 //   }
 // });
+
+module.exports = indexRouter;
