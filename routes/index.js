@@ -3,7 +3,8 @@ const indexRouter = express.Router();
 
 indexRouter.get('/', (req, res) => {
   res.render('index');
-});
+
+
 
 /** Class used for uploading images. */
 class Uploader {
@@ -351,17 +352,19 @@ try {
 }
 
 
-// jQuery( document ).ready(function(){
-//   var imageLoader = document.getElementById('filePhoto');
-//   imageLoader.addEventListener('change', handleImage, false);
+jQuery( document ).ready(function(){
+  var imageLoader = document.getElementById('filePhoto');
+  imageLoader.addEventListener('change', handleImage, false);
 
-//   function handleImage(e) {
-//       var reader = new FileReader();
-//       reader.onload = function (event) {
-//           $('.image').html( '<img src="'+event.target.result+'"/>' );
-//       }
-//       reader.readAsDataURL(e.target.files[0]);
-//   }
-// });
+  function handleImage(e) {
+      var reader = new FileReader();
+      reader.onload = function (event) {
+          $('.image').html( '<img src="'+event.target.result+'"/>' );
+      }
+      reader.readAsDataURL(e.target.files[0]);
+  }
+});
+
+});
 
 module.exports = indexRouter;
