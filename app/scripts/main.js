@@ -1,10 +1,10 @@
-const express = require('express');
-const indexRouter = express.Router();
-
-indexRouter.get('/', (req, res) => {
-  res.render('index');
-
-
+/**
+ * @file Allows uploading, cropping (with automatic resizing) and exporting
+ * of images.
+ * @author Billy Brown
+ * @license MIT
+ * @version 2.1.0
+ */
 
 /** Class used for uploading images. */
 class Uploader {
@@ -350,21 +350,3 @@ try {
 } catch (error) {
     exceptionHandler(error.message);
 }
-
-
-jQuery( document ).ready(function(){
-  var imageLoader = document.getElementById('filePhoto');
-  imageLoader.addEventListener('change', handleImage, false);
-
-  function handleImage(e) {
-      var reader = new FileReader();
-      reader.onload = function (event) {
-          $('.image').html( '<img src="'+event.target.result+'"/>' );
-      }
-      reader.readAsDataURL(e.target.files[0]);
-  }
-});
-
-});
-
-module.exports = indexRouter;
