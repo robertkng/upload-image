@@ -52,24 +52,9 @@ const port = (function() {
 const httpApp = express();
 httpApp.set('views', __dirname + "/app/views");
 httpApp.set('view engine', 'jade');
-httpApp.use(express.static(__dirname + "/static/",{
-  setHeaders: function(res, path) {
-    res.setHeader('Access-Control-Allow-Headers', 'accept, authorization, content-type, x-requested-with');
-    res.setHeader('Access-Control-Allow-Methods', 'GET,HEAD,PUT,PATCH,POST,DELETE');
-    res.setHeader('Access-Control-Allow-Origin', '*');
-  }
-}));
+httpApp.use(express.static(__dirname + "/static"));
 
 httpApp.use(cookieParser());
-
-httpApp.use(function (req, res, next) {
-  req.PRODUCTION = process.env.PRODUCTION;
-  res.locals.base_url = base_url;
-  res.setHeader('Access-Control-Allow-Headers', 'accept, authorization, content-type, x-requested-with');
-  res.setHeader('Access-Control-Allow-Methods', 'GET,HEAD,PUT,PATCH,POST,DELETE');
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  next();
-});
 
 const router = express.Router();
 httpApp.use('/', router);
